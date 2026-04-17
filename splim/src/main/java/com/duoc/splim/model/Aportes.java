@@ -2,7 +2,11 @@ package com.duoc.splim.model;
 
 import java.util.Date;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -17,14 +21,14 @@ import lombok.NoArgsConstructor;
 public class Aportes {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id_aporte;
 
     @NotNull
-    private Juego juego_aportado;
+    private String juego_aportado;
     
     @NotNull
-    private Usuario usuario_apotador;
+    private String usuario_apotador;
     
     @NotNull
     private int dinero_aportado;
