@@ -1,11 +1,14 @@
 package com.duoc.splim.model;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -24,9 +27,7 @@ public class Juego {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id_juego;
     
-    @NotNull
-    private String autor;
-
+    
     @NotBlank
     private String titulo;
     
@@ -35,6 +36,14 @@ public class Juego {
     
     @NotNull
     private Date fecha_lanzamiento;
+    
+// LLAVER FORANEAS
 
+    @OneToMany
+    private List<Aportes> aportes;
 
+    @NotNull
+    @OneToOne //(optional = false)
+    //@JoinColumn(name = "id_usuario" = nullable = false)
+    private Usuario autor;
 }
