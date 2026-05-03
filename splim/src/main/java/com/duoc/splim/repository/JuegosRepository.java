@@ -8,4 +8,5 @@ import com.duoc.splim.model.Juego;
 
 @Repository
 public interface JuegosRepository extends JpaRepository<Juego, String> {
+    
 }
