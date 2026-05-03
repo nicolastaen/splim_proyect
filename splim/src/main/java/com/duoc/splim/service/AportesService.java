@@ -16,7 +16,7 @@ public class AportesService {
     @Autowired
     private AporteRepository aporteRepository;
 
-    public List<Aportes> getJuegos() {
+    public List<Aportes> getAportes() {
         return aporteRepository.findAll();
     }
 
