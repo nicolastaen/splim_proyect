@@ -37,5 +37,13 @@ public class JuegoService {
         juegosRepository.deleteById(id);
     }
 
+    public List<LibroNacionalidadDTO> getLibrosConNacionalidad() {
+        return libroRepository.findAll().stream()
+                .map(l -> new LibroNacionalidadDTO(
+                        l.getTitulo(),
+                        l.getAutor().getNacionalidad()
+                ))
+                .toList();
+    }
 }
 

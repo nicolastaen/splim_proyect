@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 public class UsuarioAutorDto {
 
     private String nombre_usuario;
-
     private String foto_perfil;
 }

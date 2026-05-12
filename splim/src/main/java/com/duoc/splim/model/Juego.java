@@ -27,7 +27,6 @@ public class Juego {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id_juego;
     
-    
     @NotBlank
     private String titulo;
     
