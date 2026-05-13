@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UsuarioAutorDto {
 
+    private String nombre_juego;
     private String nombre_usuario;
     private String foto_perfil;
 }

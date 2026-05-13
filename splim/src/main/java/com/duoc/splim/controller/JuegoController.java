@@ -1,5 +1,6 @@
 package com.duoc.splim.controller;
 
+import com.duoc.splim.dto.UsuarioAutorDto;
 import com.duoc.splim.model.Juego;
 import com.duoc.splim.service.JuegoService;
 
@@ -52,4 +53,11 @@ public class JuegoController {
         juegoService.deleteJuego(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/montrarsimple")
+    public ResponseEntity<List<UsuarioAutorDto>> getJuegosAutorSimple() {
+        System.out.println("[LibroController] -> getJuegosAutorSimple");
+        return ResponseEntity.ok(juegoService.getJuegosAutorSimple());
+    }
+
 }

@@ -68,9 +68,6 @@ Base path del controlador:
 
 "pendiente"
 
-#### ¿Cómo funciona el DTO internamente?
-
-"pendiente"
 
 ## 6) Estructura del proyecto y explicación por capas
 
