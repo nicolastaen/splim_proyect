@@ -1,6 +1,6 @@
 # splim_proyect
 
-trabajo de full-stack que se basa en crear un "tienda" en la cual se puedan subir proyectos de juegos en el cual la camunidad tenga protagonismo y puedan seguir proyectos y apoyarlos como una especie de startup
+trabajo de full-stack que se basa en crear un "tienda" en la cual se puedan subir proyectos de juegos en el cual la comunidad tenga protagonismo y puedan seguir proyectos y apoyarlos como una especie de startup
 ---
 
 ## 1) Requisitos
@@ -66,8 +66,51 @@ Base path del controlador:
 
 ## 5) Endpoints disponibles
 
-"pendiente"
+### 5.1 Listar Usuarios
+- **Método:** `GET`
+- **URL:** `/api/v1/usuario`
+- **Descripción:** retorna todos los usuarios almacenados en la base de datos.
 
+### 5.2 Mostrar Usuarios segun el ID
+- **Método:** `GET`
+- **URL:** `/api/v1/usuario/{ID}`
+- **Descripción:** retorna un usuario segun el ID.
+
+### 5.3 Crear un Usuario
+- **Método:** `POST`
+- **URL:** `/api/v1/usuario`
+- **Descripción:** crea un usuario en la base de datos.
+- **Body JSON ejemplo:**
+
+```json
+{
+    "fecha_nacimiento":         "2007-06-06",
+    "fecha_creacion_cuenta":    "2026-13-05",
+    "nombre_usuario":           "gomorr",
+    "foto_perfil":              "xxxxx",
+    "descripcion_perfil":       "hola son un perfil de prueba"
+}
+```
+### 5.4 Eliminar Usuarios
+- **Método:** `DEL`
+- **URL:** `/api/v1/usuario/{ID}`
+- **Descripción:** Elimina un usuario de la base de datos segun el ID.
+
+### 5.5 Actualizar un Usuario
+- **Método:** `PUT`
+- **URL:** `/api/v1/usuario/{ID}`
+- **Descripción:** actualiza los datos de un usuario de base de datos segun el id.
+- **Body JSON ejemplo:**
+
+```json
+{
+    "fecha_nacimiento":         "2007-06-06",
+    "fecha_creacion_cuenta":    "2026-13-05",
+    "nombre_usuario":           "GG.gomorr", /* se actualiza el nombre de usuario */
+    "foto_perfil":              "xxxxx",
+    "descripcion_perfil":       "hola son un perfil de prueba"
+}
+```
 
 ## 6) Estructura del proyecto y explicación por capas
 
@@ -123,7 +166,7 @@ Anotación clave:
 
 También usa `@Autowired` para inyectar `...Repository`.
 
-### 5.3 `repository` (acceso a datos)
+### 6.3 `repository` (acceso a datos)
 
 En esta carpeta está `UsuarioRepository`, `JuegosRepository`,`AporteRepository`.
 
@@ -152,7 +195,7 @@ Anotación clave:
 - `@Repository`
 	- Indica que esta interfaz pertenece a la capa de acceso a datos.
 
-### 5.4 `model` (entidades / estructura de datos)
+### 6.4 `model` (entidades / estructura de datos)
 
 En esta carpeta está `Usuario`,`Juego`,`Aportes`, que representa los datos de un libro.
 
@@ -196,3 +239,11 @@ Anotaciones de Lombok usadas:
 	- Genera un constructor **vacío** (sin parámetros).
 
 Esto evita escribir mucho código repetitivo (boilerplate).
+
+
+## 7) Autor
+
+- ** Nicolas Tapia **
+- **Cargo:** Estudiante de 2do año
+- **Correo personal:** nicolastapiaenero@gmial.com
+- **Correo Institucional:** nic.tapiae@duocuc.cl
