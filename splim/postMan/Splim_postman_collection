@@ -1,0 +1,339 @@
+{
+  "info": {
+    "_postman_id": "a903c9da-54c2-43d3-bafd-934d38c29867",
+    "name": "Splim",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53558120",
+    "_collection_link": "https://go.postman.co/collection/53558120-a903c9da-54c2-43d3-bafd-934d38c29867?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Juegos",
+      "item": [
+        {
+          "name": "mostrar juegos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/juego",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "juego"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "agregar juegos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/juego",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "juego"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "eliminar juego",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/juego/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "juego",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "actualizar juego",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/juego/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "juego",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "buscar juegos por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/juego/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "juego",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "mostrar juegos simplificado",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "mostrar usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/usuario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "usuario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "agregar usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fecha_nacimiento\":         \"2007-06-06\",\r\n    \"fecha_creacion_cuenta\":    \"2026-13-05\",\r\n    \"nombre_usuario\":           \"gomorr\",\r\n    \"foto_perfil\":              \"xxxxx\",\r\n    \"descripcion_perfil\":       \"hola son un perfil de prueba\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/usuario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "usuario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "eliminar usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/usuario/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "usuario",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "actualizar usuario",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/usuario/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "usuario",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "buscar usuario por ID",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Aportes",
+      "item": [
+        {
+          "name": "mostrar aportes",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "agregar aportes",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/aportes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "aportes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "eliminar aportes",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/aportes/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "aportes",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "actualizar  aporte",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/aportes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "aportes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "buscar aportes por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/aportes/\"ID\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "aportes",
+                "\"ID\""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
