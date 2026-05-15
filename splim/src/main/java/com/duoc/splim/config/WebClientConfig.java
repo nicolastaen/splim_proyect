@@ -11,14 +11,12 @@ public class WebClientConfig {
     @Value("${steam.api.base-url}")
     private String steamApiBaseUrl;
 
-    @Value("${steam.api.key}")
-    private String steamApiKey;
-
     @Bean
     public WebClient steamWebClient() {
         return WebClient.builder()
-                .baseurl(steamApiBaseUrl)
-                .
+                .baseUrl(steamApiBaseUrl)
+                .defaultHeader("Accept", "application/json")
+                .build();
     }
 
 }

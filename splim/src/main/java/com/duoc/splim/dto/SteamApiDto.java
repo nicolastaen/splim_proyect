@@ -1,5 +1,7 @@
 package com.duoc.splim.dto;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -41,8 +43,13 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SteamApiDto {
 
-    @JsonProperty("steam_profile")
-    private SteamProfile steamProfile;
+    @JsonProperty("response")
+    private Response response;
+
+    public static class Response {
+        @JsonProperty("steam_profile")
+        private List<SteamProfile> steam_profile;
+    }
 
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
