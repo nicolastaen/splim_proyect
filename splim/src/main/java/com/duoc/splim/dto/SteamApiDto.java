@@ -47,8 +47,8 @@ public class SteamApiDto {
     private Response response;
 
     public static class Response {
-        @JsonProperty("steam_profile")
-        private List<SteamProfile> steam_profile;
+        @JsonProperty("players")
+        private List<SteamProfile> players;
     }
 
     @Data
@@ -57,5 +57,6 @@ public class SteamApiDto {
         private String steamid;
         private String profileurl;
         private String avatarfull;
+        private String personaname;
      }
 }
