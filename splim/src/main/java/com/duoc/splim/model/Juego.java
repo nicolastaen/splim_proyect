@@ -3,6 +3,7 @@ package com.duoc.splim.model;
 import java.util.Date;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -42,7 +43,7 @@ public class Juego {
     private List<Aportes> aportes;
 
     @NotNull
-    @OneToOne //(optional = false)
+    @OneToOne (cascade = CascadeType.PERSIST)
     //@JoinColumn(name = "id_usuario" = nullable = false)
     private Usuario autor;
 }
