@@ -8,7 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -42,8 +43,13 @@ public class Juego {
     @OneToMany
     private List<Aportes> aportes;
 
-    @NotNull
-    @ManyToMany (cascade = CascadeType.PERSIST)
+    //@NotNull
+    //@ManyToMany (cascade = CascadeType.PERSIST)
     //@JoinColumn(name = "id_usuario" = nullable = false)
+    //private Usuario autor;
+    
+    @NotNull
+    @ManyToOne (cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "autor_id")
     private Usuario autor;
 }
