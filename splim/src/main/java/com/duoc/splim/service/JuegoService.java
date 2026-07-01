@@ -11,13 +11,18 @@ import org.springframework.stereotype.Service;
 
 import com.duoc.splim.dto.UsuarioAutorDto;
 import com.duoc.splim.model.Juego;
+import com.duoc.splim.model.Usuario;
 import com.duoc.splim.repository.JuegosRepository;
+import com.duoc.splim.repository.UsuarioRepository;
 
 @Service
 public class JuegoService {
 
     @Autowired
     private JuegosRepository juegosRepository;
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     private static final Logger log = LoggerFactory.getLogger(JuegoService.class);
 
@@ -28,6 +33,14 @@ public class JuegoService {
 
     public Juego saveJuego(Juego juego) {
         log.info("guardando juego...");
+        
+                // 👇 Verifica que el autor exista en la BD
+        if (juego.getAutor() != null && juego.getAutor().getId_usuario() != null) {
+            Usuario autor = usuarioRepository
+                .findById(juego.getAutor().getId_usuario())
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            juego.setAutor(autor);
+        }
         return juegosRepository.save(juego);
     }
 

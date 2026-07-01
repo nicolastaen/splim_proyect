@@ -3,8 +3,8 @@ package com.duoc.splim.model;
 import java.util.Date;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -49,7 +49,7 @@ public class Juego {
     //private Usuario autor;
     
     @NotNull
-    @ManyToOne (cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "autor_id")
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "autor_id_usuario")
     private Usuario autor;
 }
